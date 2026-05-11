@@ -1,10 +1,12 @@
 const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const mobileNav = document.querySelector("[data-mobile-nav]");
+const floatingWhatsapp = document.querySelector(".floating-whatsapp");
 
 const setHeaderState = () => {
   if (!header) return;
   header.classList.toggle("is-scrolled", window.scrollY > 24);
+  floatingWhatsapp?.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.55);
 };
 
 const closeMenu = () => {
